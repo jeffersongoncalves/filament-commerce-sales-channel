@@ -2,8 +2,8 @@
 
 namespace JeffersonGoncalves\FilamentCommerce\SalesChannel\Resources\SalesChannel;
 
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Schemas\Schema;
 use Filament\Tables\Table;
 use JeffersonGoncalves\Commerce\SalesChannel\Models\SalesChannel;
 use JeffersonGoncalves\FilamentCommerce\SalesChannel\CommerceSalesChannelPlugin;
@@ -26,9 +26,9 @@ class SalesChannelResource extends Resource
         }
     }
 
-    public static function form(Schema $schema): Schema
+    public static function form(Form $form): Form
     {
-        return SalesChannelForm::configure($schema);
+        return SalesChannelForm::configure($form);
     }
 
     public static function table(Table $table): Table
